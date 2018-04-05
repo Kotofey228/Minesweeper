@@ -103,3 +103,6 @@ myenv/
 
 # mypy
 .mypy_cache/
+
+# test scripts
+*_test.py
