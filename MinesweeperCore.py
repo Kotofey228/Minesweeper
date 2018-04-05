@@ -53,6 +53,7 @@ class MinesweeperCore:
             # at first Y(vertical) then X(horizontal)
             self._playfield[y][x].Plant()
             del allnodes[plant]
+        pprint(self.GetPlayfield())
 
     def GetPlayfield(self):
         return self._playfield  # returns current matrix of Node()
@@ -126,8 +127,8 @@ class MinesweeperCore:
 def main():
     Core = MinesweeperCore()
     Core.NewGame(10, 10, 20)
-    pprint(Core.GetPlayfield())
-    print(Core.OpenNode(0, 0))
+    while True:
+        print(Core.OpenNode(int(input()), int(input())))
 
 
 if __name__ == '__main__':
